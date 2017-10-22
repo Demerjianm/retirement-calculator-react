@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 class Results extends React.Component {
 //** means power of
 //Payment x (((1+ int rate)**(period)  - 1) / rate)
-//im practicing wokeignngr wibsnr n
+//im practicing wokeignngr wibsnr n now relalltrjwo goi sdfkj df teo est sdjkfklgdjf
 
     results = () => {
         console.log(this.props)
