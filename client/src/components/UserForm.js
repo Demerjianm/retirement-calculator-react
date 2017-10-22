@@ -20,10 +20,15 @@ class UserForm extends React.Component {
         console.log(this.state)
         if(this.state.detailedCheckbox!='yes') {
         return (
+            <div>
             <GeneralForm 
                 handleChange={this.handleChange}
             />
-
+            
+             <DetailedForm
+                handleChange={this.handleChange}
+            />
+            </div>
         ) } else {
             return(
                 <DetailedForm
@@ -41,10 +46,10 @@ class UserForm extends React.Component {
         return(
             <div className='container'>
             <div className='row'>
-            <div className='col col-lg-6 col-md-6' >
+            <div className='col col-lg-6 col-md-6 col-sm-12' >
             { this.dashboard() }
             </div>
-            <div className='col col-lg-6 col-md-6'>
+            <div className='col col-lg-6 col-md-6 col-sm-12'>
             <Results                     
                 name={name}
                 retirementAge={retirementAge}
