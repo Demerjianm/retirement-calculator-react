@@ -3,3 +3,19 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+#list {
+  margin-left: 10%;
+}
+
+#dropdownRisk {
+  margin-left: 30px;
+}
+
+#detailedCheckbox {
+  margin-left: 15px
+}
+
+#detailedQuestion {
+  margin-left: 60px
+}

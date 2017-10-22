@@ -6,6 +6,7 @@ import About from './components/About';
 import Auth from './components/Auth';
 import Dashboard from './components/Dashboard';
 import FetchUser from './components/FetchUser';
+import UserForm from './components/UserForm'
 import ProtectedRoute from './components/ProtectedRoute'
 
 const App = () => (
@@ -15,7 +16,7 @@ const App = () => (
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
-        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/userform" component={UserForm} />
         <Route path="/register" render={ (props) => <Auth {...props} title="Register" /> } />
         <Route path="/login" render={ (props) => <Auth {...props} title="Login" /> } />
         <ProtectedRoute path="/dashboard" component={Dashboard} />
