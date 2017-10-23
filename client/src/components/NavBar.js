@@ -53,8 +53,12 @@ class NavBar extends React.Component {
           <a className="nav-link" href="/UserForm">Form</a>
         </li>
         <li className="nav-item">
+          <a className="nav-link" href="/FinCalculator">Financial</a>
+        </li>
+        <li className="nav-item">
           <a className="nav-link" href="/Login">Login</a>
         </li>
+        
       </ul>
       <form className="form-inline my-2 my-lg-0">
         <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" />

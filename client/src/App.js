@@ -8,6 +8,7 @@ import Dashboard from './components/Dashboard';
 import FetchUser from './components/FetchUser';
 import UserForm from './components/UserForm'
 import ProtectedRoute from './components/ProtectedRoute'
+import FinCalculator from './components/FinCalculator'
 
 const App = () => (
   <div>
@@ -17,6 +18,7 @@ const App = () => (
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/userform" component={UserForm} />
+        <Route path="/fincalculator" component={FinCalculator} />
         <Route path="/register" render={ (props) => <Auth {...props} title="Register" /> } />
         <Route path="/login" render={ (props) => <Auth {...props} title="Login" /> } />
         <ProtectedRoute path="/dashboard" component={Dashboard} />

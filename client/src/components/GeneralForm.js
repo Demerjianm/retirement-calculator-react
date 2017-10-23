@@ -82,13 +82,6 @@ class GeneralForm extends React.Component {
                 </select>
                 </div>
                 </div>
-                <div className='col-7' id='detailedQuestion'>
-                    <div className="input-group">
-                        <label className="form-control-label">Would you like to get more detailed?</label>
-                        <input id='detailedCheckbox'type="checkbox" aria-label="Checkbox for following text input" value='yes' onChange={this.props.handleChange} />   
-                    </div>
-                </div>
-                <input className="btn btn-primary" type="submit" value="Submit" />
                 
             </form>
             </div>
@@ -98,5 +91,13 @@ class GeneralForm extends React.Component {
     }
 
 }
+/*
+<div className='col-7' id='detailedQuestion'>
+<div className="input-group">
+    <label className="form-control-label">Would you like to get more detailed?</label>
+    <input id='detailedCheckbox'type="checkbox" aria-label="Checkbox for following text input" value='yes' onChange={this.props.handleChange} />   
+</div>
+</div>
+*/
 
 export default connect()(GeneralForm)
