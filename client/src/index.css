@@ -4,8 +4,18 @@ body {
   font-family: sans-serif;
 }
 
-#list {
+#fvCalc {
   margin-left: 10%;
+  margin-bottom: 10%;
+  border: 1px solid;
+  padding: 5px
+}
+
+#wook {
+  margin-left: 5%;
+  margin-top: 5px;
+  margin-bottom: 2%;
+  padding: 5px
 }
 
 #dropdownRisk {

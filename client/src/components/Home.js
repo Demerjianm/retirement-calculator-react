@@ -1,6 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+
+//grey
+//seafoam green
+//black, white
+
 const Home = ({ username }) => (
   <div>
     <h3>
