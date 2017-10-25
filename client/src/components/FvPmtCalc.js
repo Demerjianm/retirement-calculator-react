@@ -14,8 +14,21 @@ class FvPmtCalc extends React.Component {
       }
 
      inputs = () => {
-        let {futureValue, years, presentValue, interest, payment} = this.state
-        let fv
+        let {futureValue, years, presentValue, interest, payment, tax} = this.state
+        let rate = interest / 100
+        let fv = presentValue * ((1 + rate)**years)
+        fv = Math.round(fv)
+        let pmtFv = (payment * ((((1 + rate)**years) -1) / rate))
+        let fvPmt = fv + pmtFv
+        fvPmt = Math.round(fvPmt)
+
+        let taxes
+        tax =  1 - (tax / 100)  
+        taxes = ( fvPmt * tax )     
+        taxes = Math.round(taxes)
+
+
+
        return(
         <div>
         <div className="row">
@@ -55,18 +68,35 @@ class FvPmtCalc extends React.Component {
         </div>
             <br />
         <div className="input-group">
-                <label className="input-group-addon">FV</label>
+                <label className="input-group-addon">PV</label>
                 <input type="text" 
                 className="form-control" 
-                id="futureValue" 
-                placeholder="Future Value" 
+                id="presentValue" 
+                placeholder="Present Value" 
                 onChange={this.handleChange}
-                value={this.state.futureValue}
+                value={this.state.presentValue}
                 />
         </div>
+        <div className='row' id='wook'>
+             <div className='col'>
+                <div className="input-group">
+                    <span className="input-group-addon">Tax</span>
+                    <input type="text" 
+                        className="form-control" 
+                        id="tax" 
+                        placeholder="Tax %" 
+                        onChange={this.handleChange}
+                        value={this.state.tax}
+                        />
+                 </div>
+             </div>
             <br/>
+        <div className='col'>
+             <h5>Future Value: { fvPmt } </h5>
+        </div>
+        </div>
         <div>
-             <h5>Present Value: { fv } </h5>
+            <h4>After Tax: <b>{ taxes }</b></h4>
         </div>
         </div>
         </div>
