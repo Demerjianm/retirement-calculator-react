@@ -27,7 +27,21 @@ class CollapseMenu extends React.Component {
             <div className="col">
               <div className="collapse multi-collapse" id="multiCollapseExample2">
                 <div className="card card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                  <PvCalc />
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="collapse multi-collapse" id="multiCollapseExample3">
+                <div className="card card-body">
+                  <PvPmtCalc />
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="collapse multi-collapse" id="multiCollapseExample4">
+                <div className="card card-body">
+                  <FvPmtCalc />
                 </div>
               </div>
             </div>
